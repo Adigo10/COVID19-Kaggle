@@ -30,7 +30,7 @@ X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
 from sklearn.neighbors import KNeighborsClassifier
-classifier = KNeighborsClassifier(n_neighbors = 4, metric = 'minkowski', p = 1)
+classifier = KNeighborsClassifier(n_neighbors = 4, metric = 'braycurtis', p = 1)
 classifier.fit(X_train, y_train)
 
 
@@ -56,7 +56,7 @@ X_train2 = sc.fit_transform(X_train2)
 X_test2 = sc.transform(X_test2)
 
 from sklearn.neighbors import KNeighborsClassifier
-classifier = KNeighborsClassifier(n_neighbors = 4, metric = 'minkowski', p = 1)
+classifier = KNeighborsClassifier(n_neighbors = 4, metric = 'braycurtis', p = 1)
 classifier.fit(X_train2, y_train2)
 
 
