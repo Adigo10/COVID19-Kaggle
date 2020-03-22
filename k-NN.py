@@ -1,8 +1,8 @@
 # Polynomial Regression
 
 # Importing the libraries
-import numpy as np
-import matplotlib.pyplot as plt
+#import numpy as np
+#import matplotlib.pyplot as plt
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 
@@ -10,7 +10,7 @@ from sklearn.preprocessing import LabelEncoder
 dataset = pd.read_csv('train.csv')
 
 y1 = dataset.iloc[:,-2].values
-y2=dataset.iloc[:,-1].values
+y2 = dataset.iloc[:,-1].values
 
 # Splitting the dataset into the Training set and Test set
 """from sklearn.cross_validation import train_test_split
@@ -30,7 +30,7 @@ X_train = sc.fit_transform(X_train)
 X_test = sc.transform(X_test)
 
 from sklearn.neighbors import KNeighborsClassifier
-classifier = KNeighborsClassifier(n_neighbors = 8, metric = 'minkowski', p = 1)
+classifier = KNeighborsClassifier(n_neighbors = 4, metric = 'minkowski', p = 1)
 classifier.fit(X_train, y_train)
 
 
@@ -56,7 +56,7 @@ X_train2 = sc.fit_transform(X_train2)
 X_test2 = sc.transform(X_test2)
 
 from sklearn.neighbors import KNeighborsClassifier
-classifier = KNeighborsClassifier(n_neighbors = 8, metric = 'minkowski', p = 1)
+classifier = KNeighborsClassifier(n_neighbors = 4, metric = 'minkowski', p = 1)
 classifier.fit(X_train2, y_train2)
 
 
