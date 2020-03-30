@@ -9,8 +9,8 @@ from sklearn.preprocessing import LabelEncoder
 # Importing the dataset
 dataset = pd.read_csv('train.csv')
 
-y1 = dataset.iloc[:,-2].values
-y2 = dataset.iloc[:,-1].values
+y1 = dataset.iloc[:,5].values
+y2 = dataset.iloc[:,6].values
 
 # Splitting the dataset into the Training set and Test set
 """from sklearn.cross_validation import train_test_split
@@ -68,3 +68,13 @@ from sklearn.metrics import confusion_matrix
 cm = confusion_matrix(y_test2, y_pred2)
 from sklearn.metrics import accuracy_score 
 print( 'Accuracy Score fatality:',accuracy_score(y_test2,y_pred2)*100) 
+
+#submission file
+df = pd.DataFrame(y_pred1,y_pred2, columns = ['Confirmed cases', 'fatality'])
+df.to_csv('submission.csv',index = False, header = True)
+
+
+
+
+
+
